@@ -21,7 +21,7 @@
                 android:resource="@xml/clock_widget_info" />
         </receiver>
 
-        <activity android:name=".clock_widgetConfigureActivity">
+        <activity android:name=".ClockWidgetConfigureActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

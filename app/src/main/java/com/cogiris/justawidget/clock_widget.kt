@@ -7,7 +7,7 @@ import android.widget.RemoteViews
 
 /**
  * Implementation of App Widget functionality.
- * App Widget Configuration implemented in [clock_widgetConfigureActivity]
+ * App Widget Configuration implemented in [ClockWidgetConfigureActivity]
  */
 class clock_widget : AppWidgetProvider() {
     override fun onUpdate(
@@ -42,7 +42,9 @@ internal fun updateAppWidget(
     appWidgetManager: AppWidgetManager,
     appWidgetId: Int
 ) {
-    val widgetText = loadTitlePref(context, appWidgetId)
+    //val widgetText = loadTitlePref(context, appWidgetId)
+    println("updateAppWidget")
+    val widgetText = loadCalendarTime(context, appWidgetId);
     // Construct the RemoteViews object
     val views = RemoteViews(context.packageName, R.layout.clock_widget)
     views.setTextViewText(R.id.appwidget_text, widgetText)
